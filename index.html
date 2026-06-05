@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKNDR | Non pianificare. Parti e basta.</title>
+    <meta name="description" content="Esperienze esclusive per il weekend. Nessuna pianificazione, solo vibes. Prenota il tuo prossimo drop prima che finisca.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+            <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+            <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+        </a>
+        <div class="user-menu">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="it">IT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="icon-btn" aria-label="Menu" id="burger-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="menu-overlay" id="fullscreen-menu">
+        <div class="menu-header">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+                <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+                <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+            </a>
+            <button class="icon-btn close-menu-btn" id="close-menu-btn" aria-label="Chiudi Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <ul class="menu-links">
+            <li><a href="index.html" class="menu-item">Home</a></li>
+            <li><a href="drops.html" class="menu-item">Prossimi Drop</a></li>
+            <li><a href="how-it-works.html" class="menu-item">Come Funziona</a></li>
+            <li><a href="vibes.html" class="menu-item">Le Nostre Vibe</a></li>
+            <li><a href="faq.html" class="menu-item">FAQ & Supporto</a></li>
+        </ul>
+        <div class="menu-footer">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">TikTok</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <video class="hero-video" src="assets/hero-bg.mp4" autoplay loop muted playsinline></video>
+        <div class="hero-video-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="glitch-title" data-text="DROP SEGRETO">DROP SEGRETO</h1>
+            <p class="subtitle">Non pianificare. Parti e basta.</p>
+            
+            <div class="countdown-container">
+                <div class="countdown-label">Prossimo Drop tra:</div>
+                <div class="countdown-timer" id="countdown">
+                    <div class="time-box"><span id="days">02</span><small>GG</small></div>
+                    <span class="colon">:</span>
+                    <div class="time-box"><span id="hours">14</span><small>ORE</small></div>
+                    <span class="colon">:</span>
+                    <div class="time-box"><span id="minutes">45</span><small>MIN</small></div>
+                    <span class="colon">:</span>
+                    <div class="time-box"><span id="seconds">00</span><small>SEC</small></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Glowing Orb Background -->
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </header>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-text">
+            <span>NON PIANIFICARE. PARTI E BASTA. ✦ NO STRESS. SOLO VIBES. ✦ IL PROSSIMO DROP È QUASI QUI. ✦ </span>
+            <span>NON PIANIFICARE. PARTI E BASTA. ✦ NO STRESS. SOLO VIBES. ✦ IL PROSSIMO DROP È QUASI QUI. ✦ </span>
+        </div>
+    </div>
+
+    <!-- Destinations Section (The Drop) -->
+    <section class="drops-section reveal-up">
+        <div class="section-header">
+            <h2>LIVE NOW</h2>
+            <div class="live-indicator"><span class="pulse-dot"></span> 3 ESPERIENZE</div>
+        </div>
+
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <article class="destination-card" style="background-image: url('assets/berlin.png');"
+                     data-title="The Urban Jungle" data-location="Berlino" data-price="€290" data-image="assets/berlin.png"
+                     data-desc="Esplora il lato più crudo e autentico di Berlino. Accesso VIP a club underground, street art tour esclusivi e alloggio in un loft industriale per il weekend perfetto.">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag">UNDERGROUND</span>
+                        <span class="tag alert">SOLO 2 POSTI</span>
+                    </div>
+                    <h3>The Urban Jungle</h3>
+                    <p class="location">Berlino</p>
+                    <div class="card-footer">
+                        <span class="price">€290</span>
+                        <button class="btn-primary open-checkout">Prenota</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="destination-card" style="background-image: url('assets/alps.png');"
+                     data-title="The Digital Detox" data-location="Alpi Svizzere" data-price="€450" data-image="assets/alps.png"
+                     data-desc="Stacca la spina dal mondo. Tre giorni in uno chalet di lusso isolato, senza wifi, con spa privata, cibo a chilometro zero e panorami mozzafiato.">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag">RELAX</span>
+                        <span class="tag">LUXURY</span>
+                    </div>
+                    <h3>The Digital Detox</h3>
+                    <p class="location">Alpi Svizzere</p>
+                    <div class="card-footer">
+                        <span class="price">€450</span>
+                        <button class="btn-primary open-checkout">Prenota</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="destination-card" style="background-image: url('assets/ibiza.png');"
+                     data-title="The Secret Rave" data-location="Ibiza" data-price="€380" data-image="assets/ibiza.png"
+                     data-desc="Non la solita Ibiza. Scopri una location segreta per un party esclusivo, tramonti infuocati e accesso alla lista ospiti per gli eventi più ricercati della Isla.">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag">NIGHTLIFE</span>
+                        <span class="tag">MYSTERY</span>
+                    </div>
+                    <h3>The Secret Rave</h3>
+                    <p class="location">Ibiza</p>
+                    <div class="card-footer">
+                        <span class="price">€380</span>
+                        <button class="btn-primary open-checkout">Prenota</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-it-works reveal-up" id="how-it-works">
+        <h2>COME FUNZIONA</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">⚡️</div>
+                <h4>Scegli il Drop</h4>
+                <p>3 nuove destinazioni ogni martedì.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">💳</div>
+                <h4>Zero Sbatti</h4>
+                <p>Prenota con Apple Pay o dividi con Klarna.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">📱</div>
+                <h4>Concierge VIP</h4>
+                <p>Ricevi l'itinerario e i ticket su WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mock Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="checkout-modal">
+            <button class="close-modal" aria-label="Chiudi">&times;</button>
+            <div class="checkout-header">
+                <h3>WKNDR Pass</h3>
+                <p>Stai per assicurarti un weekend epico.</p>
+            </div>
+            
+            <div class="checkout-body">
+                <div class="summary-item">
+                    <span id="checkout-item-title">Pacchetto Drop</span>
+                    <span class="font-bold" id="checkout-item-price">€290.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tasse & Fee</span>
+                    <span>€10.00</span>
+                </div>
+                <hr>
+                <div class="summary-item total">
+                    <span>Totale</span>
+                    <span id="checkout-total">€300.00</span>
+                </div>
+
+                <div class="payment-methods">
+                    <button class="btn-pay apple-pay">Pay with Pay</button>
+                    <button class="btn-pay klarna">Paga in 3 rate con <strong>Klarna.</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity Details Modal -->
+    <div class="modal-overlay" id="activity-modal">
+        <div class="checkout-modal activity-details-modal">
+            <button class="close-modal close-activity" aria-label="Chiudi">&times;</button>
+            <div class="activity-cover" id="activity-cover"></div>
+            <div class="checkout-body" style="padding: 1.5rem;">
+                <div class="tags" id="activity-tags" style="margin-bottom: 0.5rem;"></div>
+                <h3 id="activity-title" style="font-size: 2rem; margin-bottom: 0.2rem;">Titolo</h3>
+                <p class="location" id="activity-location" style="margin-bottom: 1.5rem; color: var(--text-muted);">Location</p>
+                <div class="activity-desc" id="activity-desc" style="line-height: 1.6; margin-bottom: 2rem;">
+                    Descrizione qui...
+                </div>
+                <div class="card-footer">
+                    <span class="price" id="activity-price">€000</span>
+                    <button class="btn-primary" id="btn-book-activity">Prenota Ora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

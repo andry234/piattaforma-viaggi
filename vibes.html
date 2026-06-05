@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKNDR | Le Nostre Vibe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vibe-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .vibe-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .vibe-item {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .vibe-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(30%);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        .vibe-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="background: var(--bg-dark);">
+        <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+            <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+            <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+        </a>
+        <div class="user-menu">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="it">IT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="icon-btn" aria-label="Menu" id="burger-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="menu-overlay" id="fullscreen-menu">
+        <div class="menu-header">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+            <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+            <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+        </a>
+            <button class="icon-btn close-menu-btn" id="close-menu-btn" aria-label="Chiudi Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <ul class="menu-links">
+            <li><a href="index.html" class="menu-item">Home</a></li>
+            <li><a href="drops.html" class="menu-item">Prossimi Drop</a></li>
+            <li><a href="how-it-works.html" class="menu-item">Come Funziona</a></li>
+            <li><a href="vibes.html" class="menu-item" style="color: var(--accent-neon);">Le Nostre Vibe</a></li>
+            <li><a href="faq.html" class="menu-item">FAQ & Supporto</a></li>
+        </ul>
+        <div class="menu-footer">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">TikTok</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <main style="padding: 100px 1.5rem 2rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">LE NOSTRE VIBE</h1>
+        <p style="color: var(--text-muted); margin-bottom: 3rem;">Non vendiamo voli e hotel. Vendiamo ricordi. Dai un'occhiata allo stile WKNDR.</p>
+        
+        <div class="vibe-grid">
+            <div class="vibe-item"><img src="assets/berlin.png" alt="Berlin Vibe"></div>
+            <div class="vibe-item"><img src="assets/alps.png" alt="Alps Vibe"></div>
+            <div class="vibe-item"><img src="assets/ibiza.png" alt="Ibiza Vibe"></div>
+        </div>
+    </main>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

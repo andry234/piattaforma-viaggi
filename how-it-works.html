@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKNDR | Come Funziona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .steps-container {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="background: var(--bg-dark);">
+        <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+            <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+            <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+        </a>
+        <div class="user-menu">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="it">IT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="icon-btn" aria-label="Menu" id="burger-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div class="menu-overlay" id="fullscreen-menu">
+        <div class="menu-header">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
+                <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
+                <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
+            </a>
+            <button class="icon-btn close-menu-btn" id="close-menu-btn" aria-label="Chiudi Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <ul class="menu-links">
+            <li><a href="index.html" class="menu-item">Home</a></li>
+            <li><a href="drops.html" class="menu-item">Prossimi Drop</a></li>
+            <li><a href="how-it-works.html" class="menu-item" style="color: var(--accent-neon);">Come Funziona</a></li>
+            <li><a href="vibes.html" class="menu-item">Le Nostre Vibe</a></li>
+            <li><a href="faq.html" class="menu-item">FAQ & Supporto</a></li>
+        </ul>
+        <div class="menu-footer">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">TikTok</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <main style="padding: 100px 1.5rem 2rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">COME FUNZIONA</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Dalla scoperta alla partenza, tutto in tre semplici passaggi.</p>
+        
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon">⚡️</div>
+                <h4>1. Scegli il Drop</h4>
+                <p>Ogni martedì alle 12:00 sblocchiamo 3 nuove destinazioni esclusive. Non hai tempo per decidere: i posti finiscono in fretta.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">💳</div>
+                <h4>2. Zero Sbatti</h4>
+                <p>Nessun form infinito, nessun redirect strano. Scegli la vibe, paghi in un attimo con Apple Pay o dividi il conto con Klarna, e il gioco è fatto.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">📱</div>
+                <h4>3. Concierge VIP</h4>
+                <p>Appena prenotato, entri in un gruppo WhatsApp privato. Il tuo concierge personale ti manderà lì le carte d'imbarco, le info sull'alloggio e i consigli per la serata.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
