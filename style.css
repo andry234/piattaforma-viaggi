@@ -888,3 +888,37 @@ hr {
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* 3D Tilt optimizations */
+.destination-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+.card-content {
+    transform: translateZ(30px); /* Brings text forward in 3D space */
+    transition: transform 0.3s;
+}
+.card-overlay {
+    transform: translateZ(10px);
+}

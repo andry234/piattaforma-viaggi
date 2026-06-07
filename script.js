@@ -306,3 +306,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Lenis Smooth Scrolling
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            autoRaf: true,
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+    }
+});
+
+// 3D Tilt Effect for Cards
+document.addEventListener('DOMContentLoaded', () => {
+    // Only apply on fine pointer (desktop)
+    if (window.matchMedia("(pointer: fine)").matches) {
+        const cards = document.querySelectorAll('.destination-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within the element.
+                const y = e.clientY - rect.top;  // y position within the element.
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+                const rotateY = ((x - centerX) / centerX) * 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+                card.style.transition = 'transform 0.1s ease-out';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                card.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+            });
+        });
+    }
+});

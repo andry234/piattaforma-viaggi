@@ -58,6 +58,7 @@ Per il lancio, non serve un'app completa. Serve un flusso web mobile fluido e se
 *   **Dettagli Sensoriali (Micro-interazioni):** Cursore custom (pallino che reagisce all'hover) e Video Background adrenalinico per la sezione Hero.
 
 ## 8. Idee in Brainstorming (Da valutare in futuro)
+*   **Prezzi Dinamici (Dynamic Pricing):** Mostrare una barra di avanzamento dei posti disponibili per incrementare l'urgenza (es. "Solo 2 posti a 290€. Prossimo tier: 350€").
 *   **Quiz "Trova la tua Vibe":** Micro-quiz visivo per suggerire il drop perfetto agli utenti indecisi.
 *   **Integrazione CRM (Airtable / Make.com):** Collegare il checkout finto a un vero database per raccogliere contatti reali.
 *   **Preview Concierge Post-Acquisto:** Una finta chat interattiva stile WhatsApp per simulare l'esperienza del concierge 24/7 post-pagamento.
