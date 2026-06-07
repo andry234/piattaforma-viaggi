@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WKNDR | Non pianificare. Parti e basta.</title>
     <meta name="description" content="Esperienze esclusive per il weekend. Nessuna pianificazione, solo vibes. Prenota il tuo prossimo drop prima che finisca.">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css?v=1.9">
 </head>
 <body>
-    
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
             <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
-            <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
         </a>
         <div class="user-menu">
             <div class="lang-switcher">
@@ -31,13 +27,11 @@
             </button>
         </div>
     </nav>
-
     <!-- Fullscreen Mobile Menu Overlay -->
     <div class="menu-overlay" id="fullscreen-menu">
         <div class="menu-header">
             <a href="index.html" class="logo-wrapper" style="text-decoration: none; color: white; display: flex; flex-direction: column;">
                 <div class="logo" style="margin: 0; line-height: 1;">WKNDR<span class="logo-dot"></span></div>
-                <div style="font-family: var(--font-body); font-size: 0.55rem; color: var(--text-muted); letter-spacing: 1.5px; margin-top: 4px; font-weight: 600;">✈ TRAVEL DROPS</div>
             </a>
             <button class="icon-btn close-menu-btn" id="close-menu-btn" aria-label="Chiudi Menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -55,16 +49,13 @@
             <a href="#" class="social-link">TikTok</a>
         </div>
     </div>
-
     <!-- Hero Section -->
     <header class="hero">
         <video class="hero-video" src="assets/hero-bg.mp4" autoplay loop muted playsinline></video>
         <div class="hero-video-overlay"></div>
-        
         <div class="hero-content">
             <h1 class="glitch-title" data-text="DROP SEGRETO">DROP SEGRETO</h1>
             <p class="subtitle">Non pianificare. Parti e basta.</p>
-            
             <div class="countdown-container">
                 <div class="countdown-label">Prossimo Drop tra:</div>
                 <div class="countdown-timer" id="countdown">
@@ -78,12 +69,10 @@
                 </div>
             </div>
         </div>
-        
         <!-- Glowing Orb Background -->
         <div class="glow-orb orb-1"></div>
         <div class="glow-orb orb-2"></div>
     </header>
-
     <!-- Marquee -->
     <div class="marquee-container">
         <div class="marquee-text">
@@ -91,14 +80,12 @@
             <span>NON PIANIFICARE. PARTI E BASTA. ✦ NO STRESS. SOLO VIBES. ✦ IL PROSSIMO DROP È QUASI QUI. ✦ </span>
         </div>
     </div>
-
     <!-- Destinations Section (The Drop) -->
     <section class="drops-section reveal-up">
         <div class="section-header reveal-blur">
             <h2>LIVE NOW</h2>
             <div class="live-indicator"><span class="pulse-dot"></span> 3 ESPERIENZE</div>
         </div>
-
         <div class="cards-container">
             <!-- Card 1 -->
             <article class="destination-card reveal-scale delay-100" style="background-image: url('assets/berlin.png');"
@@ -118,7 +105,6 @@
                     </div>
                 </div>
             </article>
-
             <!-- Card 2 -->
             <article class="destination-card reveal-scale delay-200" style="background-image: url('assets/alps.png');"
                      data-title="The Digital Detox" data-location="Alpi Svizzere" data-price="€450" data-image="assets/alps.png"
@@ -137,7 +123,6 @@
                     </div>
                 </div>
             </article>
-
             <!-- Card 3 -->
             <article class="destination-card reveal-scale delay-300" style="background-image: url('assets/ibiza.png');"
                      data-title="The Secret Rave" data-location="Ibiza" data-price="€380" data-image="assets/ibiza.png"
@@ -158,7 +143,6 @@
             </article>
         </div>
     </section>
-
     <!-- How it works -->
     <section class="how-it-works reveal-up" id="how-it-works">
         <h2>COME FUNZIONA</h2>
@@ -180,7 +164,6 @@
             </div>
         </div>
     </section>
-
     <!-- Mock Checkout Modal -->
     <div class="modal-overlay" id="checkout-modal">
         <div class="checkout-modal">
@@ -189,7 +172,6 @@
                 <h3>WKNDR Pass</h3>
                 <p>Stai per assicurarti un weekend epico.</p>
             </div>
-            
             <div class="checkout-body">
                 <div class="summary-item">
                     <span id="checkout-item-title">Pacchetto Drop</span>
@@ -204,7 +186,6 @@
                     <span>Totale</span>
                     <span id="checkout-total">€300.00</span>
                 </div>
-
                 <div class="payment-methods">
                     <button class="btn-pay apple-pay">Pay with Pay</button>
                     <button class="btn-pay klarna">Paga in 3 rate con <strong>Klarna.</strong></button>
@@ -212,7 +193,6 @@
             </div>
         </div>
     </div>
-
     <!-- Activity Details Modal -->
     <div class="modal-overlay" id="activity-modal">
         <div class="checkout-modal activity-details-modal">
@@ -232,7 +212,6 @@
             </div>
         </div>
     </div>
-
     <script src="lang.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="script.js"></script>
