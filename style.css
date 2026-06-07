@@ -164,24 +164,38 @@ h1, h2, h3, h4, .logo {
 .lang-switcher {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.lang-switcher span {
+    display: none; /* Hide the vertical bar | */
 }
 
 .lang-btn {
-    background: none;
+    background: transparent;
     border: none;
     color: var(--text-muted);
     cursor: pointer;
-    padding: 0;
-    font-weight: 600;
-    transition: color 0.2s;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
 }
 
-.lang-btn.active, .lang-btn:hover {
+.lang-btn:hover {
     color: var(--text-light);
+}
+
+.lang-btn.active {
+    background: var(--accent-neon);
+    color: var(--bg-dark);
+    box-shadow: 0 2px 10px rgba(255, 152, 94, 0.3);
 }
 
 .countdown-timer {
