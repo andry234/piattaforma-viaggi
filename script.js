@@ -87,13 +87,30 @@ const initMenu = () => {
         document.body.style.overflow = '';
     };
 
-    if (burgerBtn && closeMenuBtn && fullscreenMenu) {
-        burgerBtn.addEventListener('click', openMenu);
-        closeMenuBtn.addEventListener('click', closeMenu);
+    if (burgerBtn && fullscreenMenu) {
+        burgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (fullscreenMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', closeMenu);
+        }
         
         // Close menu when a link is clicked
         menuLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (fullscreenMenu.classList.contains('active') && !fullscreenMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+                closeMenu();
+            }
         });
     }
 };

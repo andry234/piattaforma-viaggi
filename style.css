@@ -940,3 +940,58 @@ html.lenis, html.lenis body {
         background-image: none;
     }
 }
+
+/* Dropdown Menu Override */
+.menu-overlay {
+    top: 80px;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    height: auto;
+    background-color: rgba(30, 30, 35, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 1.5rem;
+    transform: translateY(-20px) scale(0.95);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.menu-overlay.active {
+    transform: translateY(0) scale(1);
+}
+
+.menu-header {
+    display: none; /* Hide header inside dropdown */
+}
+
+.menu-links {
+    gap: 0.5rem;
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    padding: 12px 0;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.menu-links li:last-child .menu-item {
+    border-bottom: none;
+}
+
+.menu-footer {
+    padding-bottom: 0;
+    padding-top: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .menu-overlay {
+        top: 85px;
+        left: auto;
+        right: 1.5rem;
+        width: 300px;
+    }
+}
