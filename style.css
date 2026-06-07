@@ -922,3 +922,21 @@ html.lenis, html.lenis body {
 .card-overlay {
     transform: translateZ(10px);
 }
+
+/* iOS Floating Menu Test (Mobile Only) */
+@media (max-width: 768px) {
+    .navbar {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background: rgba(30, 30, 35, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        /* Remove the gradient background on mobile */
+        background-image: none;
+    }
+}
