@@ -1003,3 +1003,38 @@ html.lenis, html.lenis body {
         width: 300px;
     }
 }
+
+/* Center Logo on Mobile Nav */
+@media (max-width: 768px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 8px 15px;
+    }
+    
+    .navbar .logo {
+        grid-column: 2;
+        justify-self: center;
+        font-size: 1.3rem; /* Slightly balanced for mobile */
+        align-items: center; /* Fix vertical alignment */
+        margin-top: 2px;
+    }
+    
+    .navbar .user-menu {
+        display: contents; /* Unbox for grid layout */
+    }
+
+    .navbar .lang-switcher {
+        grid-column: 1;
+        justify-self: start;
+        margin-right: 0;
+        transform: scale(0.9); /* Slightly shrink to fit perfectly */
+        transform-origin: left center;
+    }
+
+    .navbar #burger-menu-btn {
+        grid-column: 3;
+        justify-self: end;
+    }
+}
