@@ -942,8 +942,12 @@ html.lenis, html.lenis body {
 }
 
 /* Dropdown Menu Override */
+.navbar {
+    z-index: 1000 !important; /* Ensure navbar is always above the dropdown */
+}
+
 .menu-overlay {
-    top: 85px; /* Slight bump down for breathing room */
+    top: 105px; /* Give much more space from the navbar, especially for iOS safe areas */
     left: 15px;
     right: 15px;
     width: auto;
