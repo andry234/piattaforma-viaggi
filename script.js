@@ -163,7 +163,7 @@ const initActivityDetails = () => {
 
 // Scroll Animations
 const initScrollAnimations = () => {
-    const reveals = document.querySelectorAll('.reveal-up');
+    const reveals = document.querySelectorAll('.reveal-up, .reveal-blur, .reveal-scale');
     
     if (reveals.length === 0) return;
 
@@ -175,7 +175,7 @@ const initScrollAnimations = () => {
     const revealOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-visible');
+                entry.target.classList.add('reveal-visible', 'is-visible');
                 observer.unobserve(entry.target);
             }
         });
