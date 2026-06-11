@@ -374,3 +374,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Page Transitions
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.querySelector('.page-transition-overlay');
+    if (overlay) {
+        // Slide out overlay on load
+        setTimeout(() => {
+            requestAnimationFrame(() => {
+                overlay.classList.add('is-loaded');
+            });
+        }, 100);
+    }
+
+    // Intercept links
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            const target = link.getAttribute('target');
+            
+            if (!href || href.startsWith('#') || href.startsWith('http') || target === '_blank') return;
+            if (e.ctrlKey || e.metaKey) return;
+
+            e.preventDefault();
+            
+            if (overlay) {
+                overlay.classList.remove('is-loaded');
+                overlay.classList.add('is-entering');
+                
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        overlay.classList.remove('is-entering');
+                        overlay.classList.add('is-active');
+                    });
+                });
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 600);
+            } else {
+                window.location.href = href;
+            }
+        });
+    });
+});
