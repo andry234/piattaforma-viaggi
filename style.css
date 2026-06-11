@@ -809,11 +809,11 @@ hr {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: rgba(10, 10, 12, 0.9);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 12px 20px;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 50px;
+    padding: 14px 26px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -821,7 +821,41 @@ hr {
     transform: translateY(150%);
     opacity: 0;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.fomo-ticker::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        var(--accent-glow) 25%,
+        var(--accent-neon) 50%,
+        var(--accent-glow) 75%,
+        transparent 100%
+    );
+    animation: rotateGlow 4s linear infinite;
+    z-index: -2;
+}
+
+.fomo-ticker::after {
+    content: '';
+    position: absolute;
+    inset: 1.5px;
+    background: rgba(10, 10, 12, 0.95);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .fomo-ticker.visible {
