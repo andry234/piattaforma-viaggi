@@ -1027,10 +1027,11 @@ html.lenis, html.lenis body {
 .transition-logo {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-style: italic;
     font-size: 4rem;
     letter-spacing: 2px;
     color: var(--text-light);
+    display: flex;
+    align-items: baseline;
     text-transform: lowercase;
 }
 .transition-logo span {
