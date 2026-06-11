@@ -1025,10 +1025,10 @@ html.lenis, html.lenis body {
 }
 
 .transition-logo {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 4rem;
-    letter-spacing: 2px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: -2px;
     color: var(--text-light);
     display: flex;
     align-items: baseline;
