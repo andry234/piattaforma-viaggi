@@ -47,12 +47,14 @@ h1, h2, h3, h4, .logo {
 }
 
 .logo {
+    font-family: var(--font-body); /* Poppins for lowercase support */
     font-size: 1.5rem;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: -1px;
     display: flex;
     align-items: center;
     gap: 6px;
+    text-transform: lowercase;
 }
 
 .logo-dot {
